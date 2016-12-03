@@ -10,4 +10,10 @@ public class CircuitsController : MonoBehaviour
 		selected = null;
 
 	}
+
+	public void Delete()
+	{
+		Destroy (selected.gameObject);
+
+	}
 }
