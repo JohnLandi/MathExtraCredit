@@ -1,15 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : MonoBehaviour
+{
+	public void toMainMenu()
+	{
+		SceneManager.LoadScene (0);
 
-	// Use this for initialization
-	void Start () {
-	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+
+	public void toCircuits()
+	{
+		SceneManager.LoadScene (1);
+
 	}
+
+
+	public void toVen()
+	{
+		SceneManager.LoadScene (2);
+
+	}
+
+	public void toTables()
+	{
+		SceneManager.LoadScene (3);
+
+	}
+
+
+	public void Quit()
+	{
+		Application.Quit();
+
+	}
+
 }
