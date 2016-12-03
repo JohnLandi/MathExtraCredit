@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CircuitsController : MonoBehaviour {
+public class CircuitsController : MonoBehaviour 
+{
+	public GameObject selected;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Deselect()
+	{
+		selected = null;
+
 	}
 }
