@@ -46,8 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Circuits\Scripts\CircuitsController.cs" />
+     <Compile Include="Assets\Circuits\Scripts\GateInput.cs" />
+     <Compile Include="Assets\Circuits\Scripts\GateOutput.cs" />
      <Compile Include="Assets\Circuits\Scripts\LightScript.cs" />
      <Compile Include="Assets\Circuits\Scripts\MouseDrag.cs" />
+     <Compile Include="Assets\Circuits\Scripts\NotGate.cs" />
+     <Compile Include="Assets\Circuits\Scripts\NotGateOutput.cs" />
      <Compile Include="Assets\Circuits\Scripts\Switch.cs" />
      <Compile Include="Assets\Circuits\Scripts\SwitchButton.cs" />
      <Compile Include="Assets\Menu\Scripts\MenuManager.cs" />

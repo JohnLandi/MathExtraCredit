@@ -28,14 +28,14 @@ public class MouseDrag : MonoBehaviour
 
 	}
 
-	void OnMouseDown()
+	void OnMouseUp()
 	{
-		if(cc.selected != null)
-			cc.selected.GetComponent<SpriteRenderer>().color = Color.white;
+		/*if(cc.selected != null)
+			cc.selected.GetComponent<SpriteRenderer>().color = Color.white;*/
 
 		//Debug.Log ("Selected");
 		cc.selected = this.gameObject;
-		cc.selected.GetComponent<SpriteRenderer>().color = Color.yellow;
+		/*cc.selected.GetComponent<SpriteRenderer>().color = Color.yellow;*/
 
 	}
 

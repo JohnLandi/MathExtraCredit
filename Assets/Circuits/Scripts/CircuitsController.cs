@@ -20,7 +20,7 @@ public class CircuitsController : MonoBehaviour
 	public Slider WireRotater;
 
 
-	void Update()
+	void FixedUpdate()
 	{
 		updateSpawnText ();
 
@@ -91,7 +91,7 @@ public class CircuitsController : MonoBehaviour
 
 	public void WireRotate()
 	{
-		if (selected.gameObject.tag == "Wire") 
+		if (selected.gameObject.tag == "Wire" && selected.gameObject.GetComponent<Switch>().rotate == true) 
 		{
 			WireRotatorGO.SetActive (true);
 

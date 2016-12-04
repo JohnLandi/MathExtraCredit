@@ -18,7 +18,7 @@ public class SwitchButton : MonoBehaviour {
 	}
 
 
-	void OnMouseDown()
+	void OnMouseUp()
 	{
 		if (this.gameObject.GetComponentInParent<Switch> ().on == false) 
 		{
@@ -30,6 +30,21 @@ public class SwitchButton : MonoBehaviour {
 		{
 			GetComponent<SpriteRenderer> ().color = Color.red;
 			this.gameObject.GetComponentInParent<Switch> ().on = false;
+
+			/*GameObject[] ends;
+
+			ends = GameObject.FindGameObjectsWithTag ("End");
+
+			foreach (GameObject end in ends)
+				end.GetComponent<Switch> ().on = false;*/
+
+			GameObject[] wires;
+
+			wires = GameObject.FindGameObjectsWithTag ("Wire");
+
+			foreach (GameObject wire in wires)
+				wire.GetComponent<Switch> ().on = false;
+
 
 		}
 
