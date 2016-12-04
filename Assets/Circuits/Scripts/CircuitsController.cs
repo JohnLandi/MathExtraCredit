@@ -19,6 +19,7 @@ public class CircuitsController : MonoBehaviour
 	public GameObject WireRotatorGO;
 	public Slider WireRotater;
 
+
 	void Update()
 	{
 		updateSpawnText ();

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Circuits\Scripts\CircuitsController.cs" />
+     <Compile Include="Assets\Circuits\Scripts\LightScript.cs" />
      <Compile Include="Assets\Circuits\Scripts\MouseDrag.cs" />
      <Compile Include="Assets\Circuits\Scripts\Switch.cs" />
      <Compile Include="Assets\Circuits\Scripts\SwitchButton.cs" />
