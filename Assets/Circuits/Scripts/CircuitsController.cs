@@ -5,14 +5,25 @@ public class CircuitsController : MonoBehaviour
 {
 	public GameObject selected;
 
+	public GameObject SpawnPosition;
+
 	public int whichInArray;
 
 	public GameObject[] selectArray;
 
+	void Update()
+	{
+		//SelectedColor ();
+
+	}
 
 	public void Deselect()
 	{
-		selected = null;
+		if (selected != null)
+		{
+			selected.GetComponent<SpriteRenderer> ().color = Color.white;
+			selected = null;
+		}
 
 	}
 
@@ -47,6 +58,18 @@ public class CircuitsController : MonoBehaviour
 		{
 			whichInArray = 0;
 		}
+
+	}
+
+	public void Create()
+	{
+		Instantiate(selectArray[whichInArray], SpawnPosition.transform.position, SpawnPosition.transform.rotation);
+
+	}
+
+	public void SelectedColor()
+	{
+		selected.GetComponent<SpriteRenderer>().color = Color.yellow;
 
 	}
 }
