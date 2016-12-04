@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CircuitsController : MonoBehaviour 
 {
@@ -11,9 +12,13 @@ public class CircuitsController : MonoBehaviour
 
 	public GameObject[] selectArray;
 
+	public string[] selectArrayText;
+
+	public Text spawnText;
+
 	void Update()
 	{
-		//SelectedColor ();
+		updateSpawnText ();
 
 	}
 
@@ -67,9 +72,17 @@ public class CircuitsController : MonoBehaviour
 
 	}
 
-	public void SelectedColor()
+	public void updateSpawnText()
+	{
+		if (spawnText) {
+			string hud = selectArrayText[whichInArray];
+			spawnText.text = hud;
+		}
+	}
+
+	/*public void SelectedColor()
 	{
 		selected.GetComponent<SpriteRenderer>().color = Color.yellow;
 
-	}
+	}*/
 }
