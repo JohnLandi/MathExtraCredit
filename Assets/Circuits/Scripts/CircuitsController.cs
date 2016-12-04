@@ -16,9 +16,16 @@ public class CircuitsController : MonoBehaviour
 
 	public Text spawnText;
 
+	public GameObject WireRotatorGO;
+	public Slider WireRotater;
+
 	void Update()
 	{
 		updateSpawnText ();
+
+		if (selected != null) {
+			WireRotate ();
+		}
 
 	}
 
@@ -74,10 +81,28 @@ public class CircuitsController : MonoBehaviour
 
 	public void updateSpawnText()
 	{
-		if (spawnText) {
+		if (spawnText) 
+		{
 			string hud = selectArrayText[whichInArray];
 			spawnText.text = hud;
 		}
+	}
+
+	public void WireRotate()
+	{
+		if (selected.gameObject.tag == "Wire") 
+		{
+			WireRotatorGO.SetActive (true);
+
+			selected.transform.rotation = Quaternion.Euler (0, 0, WireRotater.value);
+
+		}
+
+		else
+			WireRotatorGO.SetActive (false);
+
+
+
 	}
 
 	/*public void SelectedColor()

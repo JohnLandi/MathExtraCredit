@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Circuits\Scripts\CircuitsController.cs" />
      <Compile Include="Assets\Circuits\Scripts\MouseDrag.cs" />
+     <Compile Include="Assets\Circuits\Scripts\Switch.cs" />
+     <Compile Include="Assets\Circuits\Scripts\SwitchButton.cs" />
      <Compile Include="Assets\Menu\Scripts\MenuManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
