@@ -45,19 +45,13 @@ public class Switch : MonoBehaviour
 	void OnTriggerStay2D(Collider2D other)
 	{
 		
-		if (this.gameObject.tag == "Wire") 
-		{
-			if (other.gameObject.tag == ("OutputOfGate") || other.gameObject.tag == ("Start"))
-				this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
+		if ((this.gameObject.tag == "Wire") && (other.gameObject.tag == ("OutputOfGate") || other.gameObject.tag == ("Start")))
+			this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
 
-		}
 
-		if (this.gameObject.tag == "InputOfGate") 
-		{
-			if (other.gameObject.tag == ("Wire"))
-				this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
-
-		}
+		if (this.gameObject.tag == "InputOfGate" && (other.gameObject.tag == ("Wire")))
+			this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
+		
 					
 
 			/*if (other.gameObject == null && isNotGate)

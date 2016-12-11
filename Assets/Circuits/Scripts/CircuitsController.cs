@@ -106,6 +106,8 @@ public class CircuitsController : MonoBehaviour
 			WireRotatorGO.SetActive (false);
 
 
+		if(selected.GetComponent<GateOutput>().not == true)
+			selected.transform.rotation = Quaternion.Euler (0, 0, 30);
 
 	}
 
