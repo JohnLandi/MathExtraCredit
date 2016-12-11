@@ -17,7 +17,9 @@ public class CircuitsController : MonoBehaviour
 	public Text spawnText;
 
 	public GameObject WireRotatorGO;
+	public GameObject WireRotatorGO2;
 	public Slider WireRotater;
+	public Slider WireRotater2;
 
 
 	void FixedUpdate()
@@ -26,6 +28,7 @@ public class CircuitsController : MonoBehaviour
 
 		if (selected != null) {
 			WireRotate ();
+			WireXChange ();
 		}
 
 	}
@@ -101,6 +104,23 @@ public class CircuitsController : MonoBehaviour
 
 		else
 			WireRotatorGO.SetActive (false);
+
+
+
+	}
+
+	public void WireXChange()
+	{
+		if (selected.gameObject.tag == "Wire" && selected.gameObject.GetComponent<Switch>().rotate == true) 
+		{
+			WireRotatorGO2.SetActive (true);
+
+			selected.transform.localScale = new Vector3 (WireRotater2.value, .2f, 1f);
+
+		}
+
+		else
+			WireRotatorGO2.SetActive (false);
 
 
 
