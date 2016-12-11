@@ -43,6 +43,7 @@ public class ttGM : MonoBehaviour {
 			mid.SetActive (false);
 			eb.gameObject.SetActive (true);
 			endtext.enabled = true;
+			timerText.enabled = false;
 
 		}
 
