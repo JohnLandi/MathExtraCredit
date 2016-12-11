@@ -28,7 +28,7 @@ public class MouseDrag : MonoBehaviour
 
 	}
 
-	void OnMouseUp()
+	void OnMouseDown()
 	{
 		if (cc.selected != null)
 			cc.selected.GetComponent<SpriteRenderer> ().color = Color.white;

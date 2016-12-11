@@ -11,6 +11,10 @@ public class GateOutput : MonoBehaviour {
 	public bool and = false;
 	public bool or = false;
 	public bool not = false;
+	public bool nand = false;
+	public bool nor = false;
+	public bool eor = false;
+	public bool enor = false;
 
 	// Use this for initialization
 	void Start () 
@@ -45,8 +49,6 @@ public class GateOutput : MonoBehaviour {
 				output.GetComponent<Switch> ().output = false;
 			}
 
-			
-
 		}
 
 		if (not) 
@@ -60,6 +62,58 @@ public class GateOutput : MonoBehaviour {
 			}
 
 		}
+
+		if (nand) 
+		{
+			if (input1.GetComponent<Switch> ().output == true && input2.GetComponent<Switch> ().output == true) {
+				output.GetComponent<Switch> ().on = false;
+				output.GetComponent<Switch> ().output = false;
+			} else {
+				output.GetComponent<Switch> ().on = true;
+				output.GetComponent<Switch> ().output = true;
+			}
+
+		}
+
+		if (nor) 
+		{
+			if (input1.GetComponent<Switch> ().output == true || input2.GetComponent<Switch> ().output == true) {
+				output.GetComponent<Switch> ().on = false;
+				output.GetComponent<Switch> ().output = false;
+			}
+			else {
+				output.GetComponent<Switch> ().on = true;
+				output.GetComponent<Switch> ().output = true;
+			}
+
+		}
+
+		if (eor) 
+		{
+			if ((input1.GetComponent<Switch> ().output == true && input2.GetComponent<Switch> ().output == false) || (input1.GetComponent<Switch> ().output == false && input2.GetComponent<Switch> ().output == true)) {
+				output.GetComponent<Switch> ().on = true;
+				output.GetComponent<Switch> ().output = true;
+			}
+			else {
+				output.GetComponent<Switch> ().on = false;
+				output.GetComponent<Switch> ().output = false;
+			}
+
+		}
+
+		if (enor) 
+		{
+			if ((input1.GetComponent<Switch> ().output == true && input2.GetComponent<Switch> ().output == false) || (input1.GetComponent<Switch> ().output == false && input2.GetComponent<Switch> ().output == true)) {
+				output.GetComponent<Switch> ().on = false;
+				output.GetComponent<Switch> ().output = false;
+			}
+			else {
+				output.GetComponent<Switch> ().on = true;
+				output.GetComponent<Switch> ().output = true;
+			}
+
+		}
+
 
 	}
 
