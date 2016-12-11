@@ -29,6 +29,7 @@ public class CircuitsController : MonoBehaviour
 		if (selected != null) {
 			WireRotate ();
 			WireXChange ();
+			SelectedColor ();
 		}
 
 	}
@@ -129,9 +130,9 @@ public class CircuitsController : MonoBehaviour
 
 	}
 
-	/*public void SelectedColor()
+	public void SelectedColor()
 	{
 		selected.GetComponent<SpriteRenderer>().color = Color.yellow;
 
-	}*/
+	}
 }
