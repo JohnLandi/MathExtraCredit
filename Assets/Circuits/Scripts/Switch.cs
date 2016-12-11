@@ -44,15 +44,21 @@ public class Switch : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D other)
 	{
-		//Debug.Log ("ajb");
+		
+		if (this.gameObject.tag == "Wire") 
+		{
+			if (other.gameObject.tag == ("OutputOfGate") || other.gameObject.tag == ("Start"))
+				this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
 
-		if(other.gameObject.tag == ("Wire") || other.gameObject.tag == ("Start"))
-			if (other.gameObject.GetComponent<Switch> ().output == true && !switchStart)
-				on = true;
+		}
 
-		if (other.gameObject.tag == ("Wire") && output == true && other.GetComponent<Switch> ().switchStart != true)
-				other.gameObject.GetComponent<Switch> ().on = true;
-				
+		if (this.gameObject.tag == "InputOfGate") 
+		{
+			if (other.gameObject.tag == ("Wire"))
+				this.GetComponent<Switch> ().on = other.GetComponent<Switch> ().on;
+
+		}
+					
 
 			/*if (other.gameObject == null && isNotGate)
 				on = false;*/
@@ -68,6 +74,13 @@ public class Switch : MonoBehaviour
 
 		foreach (GameObject wire in wires)
 			wire.GetComponent<Switch> ().on = false;
+
+		GameObject[] innputs;
+
+		innputs = GameObject.FindGameObjectsWithTag ("InputOfGate");
+
+		foreach (GameObject innput in innputs)
+			innput.GetComponent<Switch> ().on = false;
 				
 
 		/*GameObject[] nots;
