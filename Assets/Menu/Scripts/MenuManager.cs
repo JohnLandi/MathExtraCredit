@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
 
 	public void toTables()
 	{
-		SceneManager.LoadScene (3);
+		SceneManager.LoadScene ("ttEnter");
 
 	}
 
