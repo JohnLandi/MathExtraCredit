@@ -77,6 +77,10 @@ public class GameController: MonoBehaviour
 
 	public void EndEdit(string entry)
 	{
+		for (int sec = 0; sec < sections.Length; sec++)
+		{
+			sections[sec].GetComponent<SelectPortion> ().clicked = false;
+		}
 		Debug.Log ("You entered " + entry);
 		//Print (sections);
 		Text = iField.text;
@@ -99,6 +103,7 @@ public class GameController: MonoBehaviour
 			for (int g = 0; g < GlobalObjectHolder[go].Length; g++)
 			{
 				Debug.Log ("Index " + go + "x" + g + ": " + GlobalObjectHolder[go] [g]);
+				GlobalObjectHolder [go] [g].GetComponent<SelectPortion> ().clicked = true;
 			}
 		}
 
