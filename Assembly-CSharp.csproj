@@ -60,6 +60,9 @@
      <Compile Include="Assets\Truthtable\ttGM.cs" />
      <Compile Include="Assets\Truthtable\ttPass.cs" />
      <Compile Include="Assets\Truthtable\ttPlayer.cs" />
+     <Compile Include="Assets\Venn\Scripts\DiagramOutput.cs" />
+     <Compile Include="Assets\Venn\Scripts\GameController.cs" />
+     <Compile Include="Assets\Venn\Scripts\SelectPortion.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
